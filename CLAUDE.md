@@ -82,7 +82,7 @@ docker-compose exec backend alembic upgrade head
   - `/agents/` - Agent implementations (main & review agents for each phase)
   - `/core/` - Core services (workflow engine, state manager, memory)
   - `/api/` - REST and WebSocket endpoints
-  - `/tools/` - Agent tools and utilities
+  - `/tools/` - Agent tools and utilitiesan
 - `/frontend/src/` - React application
 - `/docker/` - Dockerfiles and container configurations
 - Database schema defined in `/docker/postgres/init.sql`
