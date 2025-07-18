@@ -45,10 +45,25 @@ graph TB
     UI <--> REST
     REST <--> FAPI
     FAPI <--> CM
-    CM <--> Phase Agents
+    CM <--> RA
+    CM <--> DA
+    CM <--> IA
+    CM <--> TA
     CM <--> WF
-    Phase Agents <--> Core Services
-    Core Services <--> Infrastructure
+    RA <--> WF
+    DA <--> WF
+    IA <--> WF
+    TA <--> WF
+    WF <--> MM
+    WF <--> TM
+    WF <--> SM
+    MM <--> REDIS
+    SM <--> REDIS
+    CM <--> PG
+    RA <--> LLMAPI
+    DA <--> LLMAPI
+    IA <--> LLMAPI
+    TA <--> LLMAPI
 ```
 
 ### 1.2 コンポーネント設計
