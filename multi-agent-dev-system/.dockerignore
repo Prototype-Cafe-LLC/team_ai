@@ -1,0 +1,38 @@
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+*.cover
+*.log
+.git
+.gitignore
+.mypy_cache
+.pytest_cache
+.hypothesis
+.env
+.venv
+
+# Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

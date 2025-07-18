@@ -1,0 +1,14 @@
+FROM nginx:alpine
+
+# Copy static files
+COPY index.html /usr/share/nginx/html/
+
+# Copy any other static assets if needed
+# COPY *.js /usr/share/nginx/html/
+# COPY *.css /usr/share/nginx/html/
+
+# Expose port
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
