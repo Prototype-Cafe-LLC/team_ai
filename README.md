@@ -148,7 +148,7 @@ sequenceDiagram
 
 ## 📦 プロジェクト構成
 
-```
+```bash
 multi-agent-dev-system/
 ├── backend/
 │   ├── app/
@@ -195,7 +195,7 @@ docker compose up -d
 
 ## 🖥️ 使い方
 
-1. ブラウザで http://localhost:3000 にアクセス
+1. ブラウザで `http://localhost:3000` にアクセス
 2. 「Start New Project」をクリック
 3. プロジェクト名と要件を入力
 4. AIエージェントが自動的に開発プロセスを開始
