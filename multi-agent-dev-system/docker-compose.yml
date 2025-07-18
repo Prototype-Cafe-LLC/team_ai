@@ -57,16 +57,21 @@ services:
     env_file:
       - .env
 
-  # Frontend Static HTML
+  # Frontend React App
   frontend:
     build:
       context: ./frontend
-      dockerfile: ../docker/frontend/Dockerfile.simple
+      dockerfile: ../docker/frontend/Dockerfile
+      target: development
     container_name: multiagent-frontend
     volumes:
-      - ./frontend:/usr/share/nginx/html
+      - ./frontend:/app
+      - /app/node_modules
     ports:
-      - "3000:80"
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+      - VITE_WS_URL=ws://localhost:8000
     depends_on:
       - backend
 

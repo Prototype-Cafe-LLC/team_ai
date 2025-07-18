@@ -1,0 +1,119 @@
+.container {
+  background-color: #111111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.phase {
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.phasePending {
+  composes: phase;
+  border-color: #374151;
+  color: #6b7280;
+}
+
+.phaseActive {
+  composes: phase;
+  border-color: #3b82f6;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.phaseCompleted {
+  composes: phase;
+  border-color: #10b981;
+  background-color: #064e3b;
+  color: #ffffff;
+}
+
+.phaseFailed {
+  composes: phase;
+  border-color: #ef4444;
+  background-color: #7f1d1d;
+  color: #ffffff;
+}
+
+.phaseName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.phaseStatus {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.phaseIcon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.3s;
+}
+
+.connector {
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  width: 1rem;
+  height: 2px;
+  background-color: #374151;
+  z-index: -1;
+}
+
+.connectorActive {
+  composes: connector;
+  background-color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .phases {
+    grid-template-columns: 1fr;
+  }
+  
+  .connector {
+    display: none;
+  }
+}

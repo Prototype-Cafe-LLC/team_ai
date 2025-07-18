@@ -4,9 +4,9 @@ FROM node:18-alpine as development
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
-# Clean install to avoid any cached issues
-RUN rm -rf node_modules package-lock.json && npm install --legacy-peer-deps
+COPY package.json ./
+# Clean install
+RUN npm install
 
 # Copy application code
 COPY . .
@@ -15,7 +15,7 @@ COPY . .
 EXPOSE 3000
 
 # Start development server
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
 
 # Build stage
 FROM node:18-alpine as build
@@ -23,8 +23,8 @@ FROM node:18-alpine as build
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
+COPY package.json ./
+RUN npm install
 
 # Copy application code
 COPY . .
