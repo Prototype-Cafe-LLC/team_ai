@@ -8,7 +8,7 @@ marp: true
 
 (LangChain を使って)
 
-@PrototypeCafe
+@PrototypeCafe / @yukilab222
 2025/07
 
 ---
