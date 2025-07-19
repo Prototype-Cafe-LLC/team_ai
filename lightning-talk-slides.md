@@ -146,6 +146,7 @@ def create_hello_world():
 - Docker環境での動作
 
 **公開リポジトリ**: [github.com/Prototype-Cafe-LLC/team_ai](https://github.com/Prototype-Cafe-LLC/team_ai)
+**調べ物**: [https://deepwiki.com/Prototype-Cafe-LLC/team_ai](https://deepwiki.com/Prototype-Cafe-LLC/team_ai)
 
 ---
 
