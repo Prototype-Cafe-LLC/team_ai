@@ -88,3 +88,15 @@ migrate-create: ## Create a new migration
 install-deps: ## Install dependencies
 	cd frontend && npm install
 	cd backend && pip install -r requirements.txt
+
+.PHONY: test-e2e
+test-e2e: ## Run end-to-end tests with Playwright
+	cd e2e-tests && npm install && npm run playwright:install && npm test
+
+.PHONY: test-e2e-ui
+test-e2e-ui: ## Run end-to-end tests with Playwright UI
+	cd e2e-tests && npm install && npm run playwright:install && npm run test:ui
+
+.PHONY: test-e2e-debug
+test-e2e-debug: ## Debug end-to-end tests with Playwright
+	cd e2e-tests && npm install && npm run playwright:install && npm run test:debug

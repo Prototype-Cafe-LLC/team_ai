@@ -1,0 +1,17 @@
+{
+  "name": "multi-agent-e2e-tests",
+  "version": "1.0.0",
+  "description": "End-to-end tests for multi-agent development system",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "playwright:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

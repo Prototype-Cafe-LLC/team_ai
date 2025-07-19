@@ -12,6 +12,7 @@ from ..agents import (
     ImplementationMainAgent, ImplementationReviewAgent,
     TestMainAgent, TestReviewAgent
 )
+from ..config import settings
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +20,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api", tags=["projects"])
 
 # Global instances (in production, use dependency injection)
-state_manager = StateManager()
+state_manager = StateManager(redis_url=settings.redis_url)
 event_bus = EventBus()
 conductor = ConductorManager(state_manager, event_bus)
 
